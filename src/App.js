@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./App.css";
 import Home from "./pages/Home";
 import { Form, Col, Row, Container, Button } from "react-bootstrap";
@@ -16,6 +16,7 @@ import InputData from "./components/imputs/data";
 import EventTable from "./components/table";
 
 function App() {
+  const [agenda, setAgenda] = useState([]);
   const [form, setForm] = useState({
     Eventos: "",
     Cursos: "",
@@ -26,15 +27,11 @@ function App() {
     Hd: "",
     Data: "",
   });
-  const [agenda, setAgenda] = useState("");
 
   function agendar() {
     setAgenda([...agenda, form]);
   }
-  console.log(agenda);
-  useEffect(() => {
-  
-  }, [form]);
+
 
   function handleChange({ target }) {
     const { name, value } = target;
@@ -43,11 +40,12 @@ function App() {
 
   return (
     <div className="App">
+
       <Home className="mb-3 mt-3">Eventos</Home>
 
       <Container>
         <div>
-          {/* <EventTable dados={form} /> */}
+          <EventTable dados={agenda} />
         </div>
         <Form>
           <Form.Group className="mb-3" controlId="formBasicEmail">

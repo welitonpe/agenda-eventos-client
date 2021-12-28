@@ -1,7 +1,8 @@
 import { Table } from "react-bootstrap";
 
 const EventTable = ({ dados }) => {
-  console.log(dados.Cursos);
+  console.log(dados);
+
   return (
     <Table striped bordered hover size="sm">
       <thead>
@@ -18,17 +19,19 @@ const EventTable = ({ dados }) => {
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>1</td>
-          <td>{dados.Eventos}</td>
-          <td>{dados.Cursos}</td>
-          <td>{dados.Faculdade}</td>
-          <td>{dados.Local}</td>
-          <td>{dados.Temporadas}</td>
-          <td>{dados.Data}</td>
-          <td>{dados.Gerente}</td>
-          <td>{dados.Hd}</td>
-        </tr>
+        {dados.map((elemento, index) => (
+          <tr key={index}>
+            <td>{index}</td>
+            <td>{elemento?.Eventos}</td>
+            <td>{elemento?.Cursos}</td>
+            <td>{elemento?.Faculdade}</td>
+            <td>{elemento?.Local}</td>
+            <td>{elemento?.Temporadas}</td>
+            <td>{elemento?.Data}</td>
+            <td>{elemento?.Gerente}</td>
+            <td>{elemento?.Hd}</td>
+          </tr>
+        ))}
       </tbody>
     </Table>
   );
