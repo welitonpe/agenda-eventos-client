@@ -2,9 +2,9 @@ import React from 'react';
 import { Navbar, NavDropdown, Nav, Container } from 'react-bootstrap';
 function NavbarPersonalizada() {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
+    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand href="#home">Cadastro de Eventos</Navbar.Brand>
+        <Navbar.Brand href="#home">Events</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">

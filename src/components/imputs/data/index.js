@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 function InputData({ onChange, value, name }) {
   return (
     <>
-      <Form.Control type="date" name={name} onChange={onChange} value={value} />
+      <Form.Control size="lg" type="date" name={name} onChange={onChange} value={value} />
     </>
   );
 }

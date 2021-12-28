@@ -14,7 +14,7 @@ function SelectForm({ info, placeholder, id, name, onchange, value }) {
 
   return (
     <>
-      <Form.Select
+      <Form.Select size="lg"
         aria-label="Exemplo"
         onChange={onchange}
         name={name}
