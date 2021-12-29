@@ -41,7 +41,7 @@ function Home(props) {
     setForm({ ...form, [name]: value });
   }
   const [value, onChange] = useState(new Date());
-
+console.log(value)
   return (
     <>
       <NavbarPersonalizada></NavbarPersonalizada>
@@ -55,17 +55,17 @@ function Home(props) {
             <img
               src={img}
               alt=""
-              width={550}
+              width={600}
               className=" d-flex justify-content-center align-itens-center align-self-center"
             />
           </Col>
         </Row>
         <Row>
-          <Col md={12}>
+          <Col md={4}>
             <Form className="mb-5">
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Row className="g-3 mb-3">
-                  <Col md={3} sm={12}>
+                  <Col md={6} sm={12}>
                     {" "}
                     <SelectForm
                       info={Eventos}
@@ -76,7 +76,7 @@ function Home(props) {
                       onchange={handleChange}
                     />
                   </Col>
-                  <Col md={3} sm={12}>
+                  <Col md={6} sm={12}>
                     {" "}
                     <SelectForm
                       info={Cursos}
@@ -88,7 +88,7 @@ function Home(props) {
                     />
                   </Col>
 
-                  <Col md={3} sm={12}>
+                  <Col md={6} sm={12}>
                     {" "}
                     <SelectForm
                       info={Faculdade}
@@ -99,7 +99,7 @@ function Home(props) {
                       onchange={handleChange}
                     />
                   </Col>
-                  <Col md={3} sm={12}>
+                  <Col md={6} sm={12}>
                     {" "}
                     <SelectForm
                       info={Local}
@@ -111,7 +111,7 @@ function Home(props) {
                     />
                   </Col>
 
-                  <Col md={3} sm={12}>
+                  <Col md={6} sm={12}>
                     {" "}
                     <SelectForm
                       info={Temporada}
@@ -122,7 +122,7 @@ function Home(props) {
                       onchange={handleChange}
                     />
                   </Col>
-                  <Col md={3} sm={12}>
+                  <Col md={6} sm={12}>
                     {" "}
                     <InputData
                       onChange={handleChange}
@@ -132,7 +132,7 @@ function Home(props) {
                     />
                   </Col>
 
-                  <Col md={3} sm={12}>
+                  <Col md={6} sm={12}>
                     {" "}
                     <SelectForm
                       info={Gerente}
@@ -143,7 +143,7 @@ function Home(props) {
                       onchange={handleChange}
                     />
                   </Col>
-                  <Col md={3} sm={12}>
+                  <Col md={6} sm={12}>
                     {" "}
                     <SelectForm
                       info={Hd}
@@ -155,7 +155,7 @@ function Home(props) {
                     />
                   </Col>
 
-                  <Col className="mt-5 d-flex justify-content-end" md={12}>
+                  <Col className="mt-5 d-flex justify-content-center" md={12}>
                     <Button variant="success" onClick={agendar}>
                       Success
                     </Button>
@@ -164,7 +164,7 @@ function Home(props) {
               </Form.Group>
             </Form>
           </Col>
-          <Col md={12} >
+          <Col md={8} >
             <EventTable dados={agenda} />
           </Col>
         </Row>

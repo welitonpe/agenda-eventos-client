@@ -11,3 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.react-calendar{
+  border-radius: 8px;
+  padding: 10px;
+}
+.react-calendar__tile--active{
+  border-radius:8px;
+}
